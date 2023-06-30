@@ -1,0 +1,29 @@
+@import 'tailwind.css';
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+}
+
+#header {
+    padding: 20px;
+    text-align: center;
+}
+
+#main-content {
+    margin: 20px;
+}
+
+#footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+@media only screen and (max-width: 600px) {
+    #header, #main-content, #footer {
+        padding: 10px;
+        margin: 10px;
+    }
+}
