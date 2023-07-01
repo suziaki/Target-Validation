@@ -1,0 +1,28 @@
+```sql
+CREATE DATABASE esac_library;
+
+USE esac_library;
+
+CREATE TABLE Chemicals (
+    id INT AUTO_INCREMENT,
+    name VARCHAR(255),
+    esac_code VARCHAR(255),
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE SelfAssembling (
+    id INT AUTO_INCREMENT,
+    chemical_id INT,
+    assembly_process TEXT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (chemical_id) REFERENCES Chemicals(id)
+);
+
+CREATE TABLE Encoded (
+    id INT AUTO_INCREMENT,
+    self_assembling_id INT,
+    encoding_process TEXT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (self_assembling_id) REFERENCES SelfAssembling(id)
+);
+```
