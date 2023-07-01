@@ -1,1 +1,0 @@
-# This file intentionally left blank for Django to recognize it as a Python package.
